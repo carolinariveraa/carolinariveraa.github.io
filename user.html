@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>GREEN SAFE</title>
+  <title>GREEN SECURE</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -26,7 +26,7 @@
       z-index: 1;
       top: 0;
       left: 0;
-      background-color: #1d8348; /* Darker green for the sidebar */
+      background-color: #000; /* Fondo negro */
       overflow-x: hidden;
       padding-top: 20px;
     }
@@ -44,14 +44,27 @@
       color: #fff; /* White text color on hover */
     }
 
+    /* Cambia el color de las letras en el encabezado a blanco */
+    header h1 {
+      color: #fff;
+    }
+
+    /* Cambia el color de las letras en el encabezado a blanco */
+    header p {
+      color: #fff;
+    }
+
+
     /* Header styles */
     header {
+      background-image: url('pics/green.jpg'); /* Ruta de tu imagen de fondo */
+      background-size: cover;
+      background-repeat: no-repeat;
       background-color: #27ae60; /* Green header background color */
       color: #ecf0f1;
       padding: 32px;
       text-align: center;
     }
-
     /* Graph container styles */
     .graph-container {
       margin-top: 20px;
@@ -109,12 +122,41 @@
     .start-now-btn:hover {
       background-color: #219653; /* Darker green button color on hover */
     }
+
+        /* Estilos para la bienvenida del usuario y la imagen circular */
+    .user-welcome {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .user-welcome p {
+      color: #ecf0f1; /* Color del texto */
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .user-image {
+      width: 80px; /* Ancho de la imagen */
+      height: 80px; /* Altura de la imagen */
+      border-radius: 50%; /* Forma circular */
+      object-fit: cover;
+      margin: 0 auto;
+      display: block;
+    }
+
+
   </style>
 </head>
 <body class="w3-white">
 
 <!-- Side Navigation -->
 <div class="sidebar">
+
+  <div class="user-welcome">
+    <p>Welcome, User</p>
+    <img src="pics/user.png" alt="User Image" class="user-image">
+  </div>
+
   <a href="#general-overview">Overall</a>
   <a href="#golf_course">Golf Course</a>
   <a href="#event_room">Event Room</a>
