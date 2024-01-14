@@ -43,18 +43,24 @@
 </head>
 <body>
 
+  <script>
+    function redirectToUserPage() {
+      // Assuming 'user.html' is the page you want to redirect to
+      window.location.href = 'user.html';
+    }
+  </script>
+  
   <div class="container">
     <h2>Green Secure</h2>
-
-    <form action="user.html" method="get">
+  
+    <!-- Removed 'action' and 'method' attributes -->
+    <form onsubmit="redirectToUserPage(); return false;">
       <div>
         <input type="text" name="username" placeholder="User" required pattern=".{1,}" title="Please enter at least one character"><br>
         <input type="password" name="password" placeholder="Password" required pattern=".{1,}" title="Please enter at least one character"><br>
       </div>
-
+  
       <button type="submit">LOG IN</button>
     </form>
   </div>
-
-</body>
-</html>
+  
