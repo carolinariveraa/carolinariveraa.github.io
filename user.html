@@ -65,6 +65,13 @@
       padding: 32px;
       text-align: center;
     }
+
+    header {
+      padding: 48px 32px; /* Increase padding for a more spacious look */
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('pics/green.jpg') no-repeat center center; /* Dark overlay on header image */
+      background-size: cover;
+    }
+
     /* Graph container styles */
     .graph-container {
       margin-top: 20px;
@@ -74,11 +81,25 @@
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
     }
 
+    /* Graph visual enhancement */
+    .graph-container {
+      border: 1px solid #e7e7e7; /* Light border for the graph containers */
+      transition: box-shadow 0.3s; /* Smooth transition for shadows */
+    }
+
+    .graph-container:hover {box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Slight shadow on hover for depth */
+    }
+
     /* Table styles */
     table {
       width: 100%;
       border-collapse: collapse;
       margin-bottom: 20px;
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 0 10px; /* Adds space between rows */
     }
 
     table, th, td {
@@ -91,7 +112,7 @@
     }
 
     th {
-      background-color: #1d8348; /* Dark green for table header */
+      background-color: #000000; /* Dark green for table header */
       color: #fff; /* White text color for table header */
     }
 
@@ -104,9 +125,15 @@
     }
 
     /* Social media icons */
+
+
     footer i {
-      margin: 0 10px;
-      font-size: 24px;
+    color: #27ae60; /* Use brand color for social icons /
+    transition: color 0.3s; / Smooth color transition for icons */
+    }
+
+    footer i:hover {
+    color: #2ecc71; /* Lighter green on hover for icons */
     }
 
     /* Start now button */
@@ -135,6 +162,10 @@
       margin-bottom: 10px;
     }
 
+    .user-welcome p {
+    font-weight: 500; 
+    }
+
     .user-image {
       width: 80px; /* Ancho de la imagen */
       height: 80px; /* Altura de la imagen */
@@ -142,6 +173,10 @@
       object-fit: cover;
       margin: 0 auto;
       display: block;
+    }
+
+    .iframe {
+    border-radius: 8px;
     }
 
 
