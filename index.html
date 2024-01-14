@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Green Secure</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("pics/green.jpg");
+  min-height: 100%;
+}
+
+footer {
+  background-image: url("pics/green.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+  <!-- Navbar (sit on top) -->
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">GREEN SECURE</a>
+      <!-- Right-sided navbar links -->
+      <div class="w3-right w3-hide-small">
+        <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+        
+        <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a>
+        <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-usd"></i> PRICING</a>
+        <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+        <a href="login.html" target="_blank" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOG IN</a>
+  
+      </div>
+  
+      <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+  
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+  </div>
+  
+  <!-- Sidebar on small screens when clicking the menu icon -->
+  <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+    <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+    <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    <a href="login.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> LOG IN</a>
+  
+  </nav>
+  
+  <header class="bgimg-1 w3-display-container" id="home">
+    <div class="w3-display-left" style="padding:48px">
+      <div class="w3-container">
+        <span class="w3-jumbo w3-hide-small" style="color: white;">GREEN SECURE - Elevating Sports Facility Management</span><br>
+        <span class="w3-xxlarge w3-hide-large w3-hide-medium" style="color: white;">Start something that matters</span><br>
+      </div>
+      <span class="w3-large" style="color: white;">Transforming Sports Facility Operations with Analytics</span>
+      <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+    </div> 
+    <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+  </header>
+  
+  
+  
+  
+<!-- About Section -->
+<div class="w3-container" style="padding: 64px 16px" id="about">
+  <h3 class="w3-center">ABOUT THE COMPANY</h3>
+  <p>At GREEN SECURE, we are data analysis experts and specialize in visual counting and tracking technologies. Our focus is on managing the flow of people in sports facilities.</p>
+
+  <div class="w3-row-padding w3-margin-top">
+    <div class="w3-col l6 m6">
+      <p>In the world of sports clubs, occupancy management is a constant challenge. Underutilization and overcrowding of facilities not only create inconveniences for users but also impact operational efficiency. Inefficient resource and service planning leads to an unsatisfactory user experience.</p>
+
+      <p>This is where we come in with our innovative approach:</p>
+      <ul class="w3-ul">
+        <li><i class="fa fa-check w3-margin-right"></i> Real-time data on facility occupancy</li>
+        <li><i class="fa fa-check w3-margin-right"></i> Predicting future demand based on historical data</li>
+        <li><i class="fa fa-check w3-margin-right"></i> Efficient resource management and demand forecasting</li>
+      </ul>
+    </div>
+    <div class="w3-col l6 m6">
+      <img src="pics/sp.png" alt="Sports Facility" style="width: 100%; border-radius: 8px;">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-margin-top">
+    <div class="w3-col l6 m6">
+      <h4>Advantages for the club:</h4>
+      <ul class="w3-ul">
+        <li><i class="fa fa-check w3-margin-right"></i> Optimal Resource Management</li>
+        <li><i class="fa fa-check w3-margin-right"></i> Enhanced User Experience</li>
+        <li><i class="fa fa-check w3-margin-right"></i> Data-Driven Decision Making</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- AI and Ethics Section -->
+<div class="w3-container w3-light-grey" style="padding: 128px 16px" id="ai-ethics">
+  <h3 class="w3-center">AI and Ethics</h3>
+  <p class="w3-center w3-large">Our Commitment to Responsible AI</p>
+
+  <div class="w3-row-padding w3-margin-top">
+    <!-- Use w3-third for three equal columns -->
+    <div class="w3-col m4 w3-padding-16">
+      <div class="w3-border w3-border-green w3-white w3-padding">
+        <h4>Security and Transparency</h4>
+        <p>We guarantee data handling security by providing clear information about people's presence in different areas of the club, complying with data protection standards established by the law.</p>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-padding-16">
+      <div class="w3-border w3-border-green w3-white w3-padding">
+        <h4>Human Supervision</h4>
+        <p>Our AI data analysis is overseen by human experts to prevent harmful or discriminatory outcomes.</p>
+      </div>
+    </div>
+
+    <div class="w3-col m4 w3-padding-16">
+      <div class="w3-border w3-border-green w3-white w3-padding">
+        <h4>Regulatory Compliance</h4>
+        <p>We ensure compliance with established standards for low-risk AI systems, providing users with the necessary information to make informed decisions when interacting with our applications.</p>
+        </div>
+        </div>
+        
+          </div>
+
+  <div class="w3-container w3-center w3-margin-top">
+    <p>We believe that responsible AI is essential for building trust and providing valuable services to our clients while safeguarding their data and privacy.</p>
+  </div>
+</div>
+
+  
+ 
+  
+<!-- OUR WORK Section -->
+<div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">OUR WORK</h3>
+  <p class="w3-center w3-large">What We've Achieved</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l4 m6">
+      <div class="w3-container w3-padding w3-center">
+        <h4><b>Data Analysis and Predictive Modeling</b></h4>
+        <img src="pics/data.jpg" alt="Identification of Key Variables" class="w3-image" style="max-width: 100%; max-height: 200px;">
+        <p>At Green Secure, we excel in data analysis and specialize in visual tracking and counting technologies, focusing on managing crowd flow at sports facilities. We analyze historical data and employ machine learning techniques to predict future crowd levels.</p>
+      </div>
+    </div>
+    <div class="w3-col l4 m6">
+      <div class="w3-container w3-padding w3-center">
+        <h4><b>The Challenge in Sports Clubs</b></h4>
+        <img src="pics/ch.jpg" alt="Customer Segmentation" class="w3-image" style="max-width: 100%; max-height: 200px;">
+        <p>In the world of sports clubs, occupancy management is a constant challenge. Sub-occupancy and over-occupancy not only inconvenience users but also impact operational efficiency. Inefficient resource planning and services lead to an unsatisfactory user experience.</p>
+      </div>
+    </div>
+    <div class="w3-col l4 m6">
+      <div class="w3-container w3-padding w3-center">
+        <h4><b>Our Solution</b></h4>
+        <img src="pics/solution.jpg" alt="Proposal of Commercial Actions" class="w3-image" style="max-width: 100%; max-height: 200px;">
+        <p>At Green Secure, we are driving the digital transformation of sports clubs through data analysis. Our proposal focuses on providing sports clubs with real-time data on crowd flow in their facilities. We leverage existing cameras and process data on AWS.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+  
+<!-- Pricing Section -->
+<div class="w3-container w3-center" style="padding:128px 16px" id="pricing">
+  <h3>FLEXIBLE PRICING</h3>
+  <!-- Removed the paragraph with "Choose a pricing plan that fits your needs." -->
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-section w3-whole"> 
+      <ul class="w3-ul w3-hover-shadow">
+        <li class="w3-black w3-xlarge w3-padding-32">Flexible Pricing</li>
+        <li class="w3-padding-16"><b>Pay per Minute of Video</b></li>
+        <li class="w3-padding-16">With Green Secure, you have the flexibility to choose how much you want to spend. We charge only for the minutes of video processed, allowing sports clubs to control their expenses.</li>
+        <li class="w3-padding-16">
+          <h2 class="w3-wide">0.023 USD/min</h2>
+          <span class="w3-opacity">per minute</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <button class="w3-button w3-black w3-padding-large">Sign Up</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+  
+  <!-- Contact Section -->
+  <div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+    <h3 class="w3-center">CONTACT</h3>
+    <p class="w3-center w3-large">Lets get in touch. Send us a message:</p>
+    <div style="margin-top:48px">
+      <p><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Madrid, Spain</p>
+      <p><i class="fa fa-phone fa-fw w3-xxlarge w3-margin-right"></i> Phone: +34 987657876</p>
+      <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: greensecure@mail.com</p>
+      <br>
+      <form action="/action_page.php" target="_blank">
+        <p><input class="w3-input w3-border" type="text" placeholder="Name" required="" name="Name"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Email" required="" name="Email"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Subject" required="" name="Subject"></p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Message" required="" name="Message"></p>
+        <p>
+          <button class="w3-button w3-black" type="submit">
+            <i class="fa fa-paper-plane"></i> SEND MESSAGE
+          </button>
+        </p>
+      </form>
+      <!-- Image of location/map -->
+      
+    </div>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-center w3-black w3-padding-64">
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+    <div class="w3-xlarge w3-section">
+      <i class="fa fa-facebook-official w3-hover-opacity"></i>
+      <i class="fa fa-instagram w3-hover-opacity"></i>
+      <i class="fa fa-twitter w3-hover-opacity"></i>
+      <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <p>Powered by <a href="https://www.greensecure.com" title="Green Secure" target="_blank" class="w3-hover-text-green">Green Secure</a></p>
+  </footer>
+   
+  <script>
+  // Modal Image Gallery
+  function onClick(element) {
+    document.getElementById("img01").src = element.src;
+    document.getElementById("modal01").style.display = "block";
+    var captionText = document.getElementById("caption");
+    captionText.innerHTML = element.alt;
+  }
+  
+  
+  // Toggle between showing and hiding the sidebar when clicking the menu icon
+  var mySidebar = document.getElementById("mySidebar");
+  
+  function w3_open() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+    } else {
+      mySidebar.style.display = 'block';
+    }
+  }
+  
+  // Close the sidebar with the close button
+  function w3_close() {
+      mySidebar.style.display = "none";
+  }
+  </script>
+  
+  
+  
+  </body>
+</html>
