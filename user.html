@@ -219,6 +219,138 @@
     <h1 class="w3-jumbo">GREEN SECURE</h1>
     <p>Solutions for Social Clubs</p>
   </header>
+
+
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>Event Calendar</title>
+    <style>
+      .calendar-cell {
+        cursor: pointer;
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+        position: relative;
+      }
+      .calendar-cell:hover {
+        background-color: #e0e0e0;
+      }
+      .event-input {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .event-text {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+  
+  <div class="w3-container" style="padding: 64px 16px" id="calendar-container">
+    <h2 class="w3-center">Interactive Event Calendar</h2>
+    <div class="w3-responsive">
+      <table class="w3-table w3-bordered w3-border">
+        <tr class="w3-black">
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+        <!-- Week 1 -->
+        <tr>
+          <td class="calendar-cell" id="cell-1" onclick="addEvent('cell-1')">1</td>
+          <td class="calendar-cell" id="cell-2" onclick="addEvent('cell-2')">2</td>
+          <td class="calendar-cell" id="cell-3" onclick="addEvent('cell-3')">3</td>
+          <td class="calendar-cell" id="cell-4" onclick="addEvent('cell-4')">4</td>
+          <td class="calendar-cell" id="cell-5" onclick="addEvent('cell-5')">5</td>
+          <td class="calendar-cell" id="cell-6" onclick="addEvent('cell-6')">6</td>
+          <td class="calendar-cell" id="cell-7" onclick="addEvent('cell-7')">7</td>
+        </tr>
+        <!-- Week 2 -->
+          <td class="calendar-cell" id="cell-8" onclick="addEvent('cell-8')">8</td>
+          <td class="calendar-cell" id="cell-9" onclick="addEvent('cell-9')">9</td>
+          <td class="calendar-cell" id="cell-10" onclick="addEvent('cell-10')">10</td>
+          <td class="calendar-cell" id="cell-11" onclick="addEvent('cell-11')">11</td>
+          <td class="calendar-cell" id="cell-12" onclick="addEvent('cell-12')">12</td>
+          <td class="calendar-cell" id="cell-13" onclick="addEvent('cell-13')">13</td>
+          <td class="calendar-cell" id="cell-14" onclick="addEvent('cell-14')">14</td>
+        <!-- ... Repeat for each week ... -->
+        </tr>
+        <!-- Week 2 -->
+          <td class="calendar-cell" id="cell-15" onclick="addEvent('cell-15')">15</td>
+          <td class="calendar-cell" id="cell-16" onclick="addEvent('cell-16')">16</td>
+          <td class="calendar-cell" id="cell-17" onclick="addEvent('cell-17')">17</td>
+          <td class="calendar-cell" id="cell-18" onclick="addEvent('cell-18')">18</td>
+          <td class="calendar-cell" id="cell-19" onclick="addEvent('cell-19')">19</td>
+          <td class="calendar-cell" id="cell-20" onclick="addEvent('cell-20')">20</td>
+          <td class="calendar-cell" id="cell-21" onclick="addEvent('cell-21')">21</td>
+        <!-- Week 5 -->
+        <tr>
+          <td class="calendar-cell" id="cell-22" onclick="addEvent('cell-22')">22</td>
+          <td class="calendar-cell" id="cell-23" onclick="addEvent('cell-23')">23</td>
+          <td class="calendar-cell" id="cell-24" onclick="addEvent('cell-24')">24</td>
+          <td class="calendar-cell" id="cell-25" onclick="addEvent('cell-25')">25</td>
+          <td class="calendar-cell" id="cell-26" onclick="addEvent('cell-26')">26</td>
+          <td class="calendar-cell" id="cell-27" onclick="addEvent('cell-27')">27</td>
+          <td class="calendar-cell" id="cell-28" onclick="addEvent('cell-28')">28</td>
+        <tr>  
+          <td class="calendar-cell" id="cell-29" onclick="addEvent('cell-29')">29</td>
+          <!-- Empty cells for the rest of the week -->
+
+        </tr>
+      </table>
+    </div>
+  </div>
+  <script>
+    // Load saved events from localStorage
+    document.addEventListener('DOMContentLoaded', function() {
+      for (let i = 1; i <= 29; i++) { // For February 2024
+        let cellId = 'cell-' + i;
+        let cell = document.getElementById(cellId);
+        if (cell) { // Check if the cell exists in the DOM
+          let eventText = localStorage.getItem(cellId);
+          if (eventText) {
+            let textSpan = document.createElement('span');
+            textSpan.textContent = eventText;
+            textSpan.className = 'event-text';
+            cell.appendChild(textSpan);
+          }
+        }
+      }
+    });
+  
+    function addEvent(cellId) {
+      let cell = document.getElementById(cellId);
+      let existingInput = cell.querySelector('.event-input');
+      if (!existingInput) {
+        let input = document.createElement('input');
+        input.type = 'text';
+        input.className = 'event-input';
+        input.placeholder = 'New Event';
+        input.onchange = function() {
+          let textSpan = document.createElement('span');
+          textSpan.textContent = this.value;
+          textSpan.className = 'event-text';
+          cell.appendChild(textSpan);
+          localStorage.setItem(cellId, this.value); // Save event text to localStorage
+          cell.removeChild(this);
+        };
+        cell.appendChild(input);
+        input.focus();
+      }
+    }
+  </script>
+  </body>
+  </html>
+        
   
   <!-- Current Occupancy Table Section -->
   <div class="graph-container" id="current-occupancy">
