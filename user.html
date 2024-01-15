@@ -184,26 +184,41 @@
 </head>
 <body class="w3-white">
 
-<!-- Side Navigation -->
-<div class="sidebar">
-
-  <div class="user-welcome">
-    <p>Welcome, User</p>
-    <img src="pics/user.png" alt="User Image" class="user-image">
-  </div>
-
-  <a href="#general-overview">Overall</a>
-  <a href="#golf_course">Golf Course</a>
-  <a href="#event_room">Event Room</a>
-  <a href="#swimming_pool">Swimming Pool</a>
-  <a href="#gym">Gym</a>
-  <a href="#restaurant">Restaurant</a>
-  <a href="#tennis_court">Tennis Court</a>
-  <a href="#spa">Spa</a>
-  <a href="#conference_room">Conference Room</a>
-  <a href="#bar">Bar</a>
-  <a href="#running_track">Running Track</a>
-</div>
+  <div class="sidebar">
+    <div class="user-welcome">
+      <p>Welcome, User</p>
+      <input type="file" id="imageUpload" accept=".png, .jpg, .jpeg" style="display: none;" />
+      <img src="pics/user.png" alt="User Image" class="user-image" id="userImage" onclick="document.getElementById('imageUpload').click();" />
+    </div>
+  
+    <nav>
+      <a href="#general-overview">Overall</a>
+      <a href="#golf_course">Golf Course</a>
+      <a href="#event_room">Event Room</a>
+      <a href="#swimming_pool">Swimming Pool</a>
+      <a href="#gym">Gym</a>
+      <a href="#restaurant">Restaurant</a>
+      <a href="#tennis_court">Tennis Court</a>
+      <a href="#spa">Spa</a>
+      <a href="#conference_room">Conference Room</a>
+      <a href="#bar">Bar</a>
+      <a href="#running_track">Running Track</a>
+      
+        </nav>
+      </div>
+      <script>
+      document.getElementById('imageUpload').addEventListener('change', function(event) {
+        const [file] = event.target.files;
+        if (file) {
+          const reader = new FileReader();
+          reader.onload = function(e) {
+            document.getElementById('userImage').src = e.target.result;
+          };
+          reader.readAsDataURL(file);
+        }
+      });
+      </script>
+  
 
 <!-- User Icon -->
 <div class="user-icon">
