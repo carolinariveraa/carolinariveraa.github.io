@@ -293,30 +293,74 @@ footer {
       
       <style>
 
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-          .project-overview details {
-              margin-bottom: 15px;
-              border: 1px solid #dcdcdc;
-              border-radius: 5px;
-              padding: 10px;
-              background: #f9f9f9;
-          }
-  
-          .project-overview summary {
-              font-weight: bold;
-              margin: -10px -10px 10px;
-              padding: 10px;
-              background-color: #27ae60;
-              color: white;
-              cursor: pointer;
-          }
-  
-          .project-overview p {
-              padding: 0 5px;
-          }
-      </style>
-  </head>
-  <body>
+body,h1,h2,h3,h4,h5,h6 {
+    font-family: "Raleway", sans-serif;
+    color: #333; /* Darker color for better contrast */
+}
+
+.project-overview {
+    max-width: 800px; /* Set a max-width for readability */
+    margin: auto; /* Center the container */
+}
+
+.project-overview details {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #fff; /* Lighter background for the content */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.project-overview summary {
+    font-weight: bold;
+    padding: 10px;
+    background-color: #27ae60; /* Use green only for the title bars */
+    color: white;
+    cursor: pointer;
+}
+
+.project-overview summary::-webkit-details-marker {
+    display: none; /* Hide the default arrow icon */
+}
+
+.project-overview p {
+    padding: 10px;
+    border-top: 1px solid #dcdcdc; /* Add a light border for separation */
+    background: #f8f8f8; /* Slightly off-white background for the content */
+    margin: 0; /* Reset margin for paragraphs */
+}
+
+/* Remove the green bars when the details are open */
+.project-overview details[open] > summary {
+    border-bottom: 1px solid #dcdcdc;
+    border-top-left-radius:
+5px;
+border-top-right-radius: 5px;
+}
+
+/* Styling for nested details to avoid too much indentation */
+.project-overview details > details {
+margin-left: 10px;
+border-left: 3px solid #dcdcdc;
+padding-left: 10px;
+}
+
+/* Adjust the padding for nested paragraphs */
+.project-overview details > details p {
+padding-left: 15px;
+padding-right: 15px;
+}
+
+/* Adjust the styling for the open state of nested details */
+.project-overview details > details[open] > summary {
+border-bottom: 1px solid #dcdcdc;
+background-color: #f0f0f0; 
+color: #333; 
+}
+
+/* Add a hover effect to summary elements for better interactivity */
+.project-overview summary:hover {
+opacity: 0.9;
+}
   
       <!-- Project Overview Section -->
       <div class="project-overview">
@@ -354,9 +398,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
                   <p>Includes an area for profile picture display and customization
   , adding a personal touch to user accounts.</p>
   </details>
-  
-  css
-  Copy code
+
           <details>
               <summary>Responsive Navigation Menu</summary>
               <p>Ensures site accessibility across devices with a responsive design and visually appealing menu items.</p>
@@ -373,10 +415,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
           </details>
       </details>
   
-      <details>
-          <summary>Conclusion</summary>
-          <p>Green Secure is a comprehensive platform that blends functionality with user-friendly design for sports facility management. It emphasizes interactivity, personalized experiences, and streamlined operations, making it a prime example of modern web technology application in facility management.</p>
-      </details>
+
   </div>
   
   <!-- Add other sections or footer as needed -->
